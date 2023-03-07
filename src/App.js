@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function App() {
   const api = {
-    key: 'Insira_a_chave_do_API_Aqui'
+    key: '352f771834bf046af590b73d00cc76bc'
   }
 
   const [Search, setSearch] = useState('')
@@ -17,11 +17,10 @@ function App() {
       .then(res => res.json())
       .then(result => {
         setWeather(result)
-        console.log(result)
         
-        if(result.cod == 404) {
+        if(result.cod === '404') {
           alert('Cidade não encontrada');
-        } else if(result.cod == 400) {
+        } else if(result.cod === '400') {
           alert("Insira uma cidade válida");
         }
     
