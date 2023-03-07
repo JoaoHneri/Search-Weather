@@ -1,10 +1,9 @@
-import logo from './logo.svg'
 import './App.css'
 import { useState } from 'react'
 
 function App() {
   const api = {
-    key: 'Aqui você insere sua api key'
+    key: 'Insira_a_chave_do_API_Aqui'
   }
 
   const [Search, setSearch] = useState('')
@@ -13,12 +12,21 @@ function App() {
   const searchCity = () => {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${Search}&units=metric&appid=${api.key}&lang=pt_br`
-    )
+    ) 
+      
       .then(res => res.json())
       .then(result => {
         setWeather(result)
         console.log(result)
+        
+        if(result.cod == 404) {
+          alert('Cidade não encontrada');
+        } else if(result.cod == 400) {
+          alert("Insira uma cidade válida");
+        }
+    
       })
+      
   }
 
   return (
@@ -43,7 +51,7 @@ function App() {
             {typeof weather.main !== 'undefined' ? (
               <div>
                 <p>
-                  {weather.name}, {weather.sys.country}
+                  {weather.name} - {weather.sys.country}
                 </p>
 
                 <p>{weather.main.temp}°C</p>

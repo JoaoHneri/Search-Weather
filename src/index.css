@@ -19,6 +19,7 @@ code {
   border-radius: 8px;
   background-color: grey;
   padding: 2rem;
+  font-family: 'Tilt Warp', cursive;
 }
 
 .container p {
@@ -27,14 +28,13 @@ code {
 }
 
 .container h1 {
-  font-family: 'Tilt Warp', cursive;
   color: white;
   font-size: 3.8rem;
   
 }
 
 .input{
-  padding: 12px 15px;
+  padding: 12px 20px;
   border-radius: 8px;
 }
 
