@@ -15,6 +15,12 @@ code {
     monospace;
 }
 
+.App-header{
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
 .container{
   border-radius: 8px;
   background-color: grey;

@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function App() {
   const api = {
-    key: '352f771834bf046af590b73d00cc76bc'
+    key: 'insira_sua_chave_aqui'
   }
 
   const [Search, setSearch] = useState('')
