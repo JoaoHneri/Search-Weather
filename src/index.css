@@ -22,40 +22,71 @@ code {
 }
 
 .container{
-  border-radius: 8px;
-  background-color: grey;
-  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
   font-family: 'Tilt Warp', cursive;
 }
 
 .container p {
   font-size: 1.8rem;
-  color: black;
+  color: #ca8e7b;
 }
 
 .container h1 {
-  color: white;
+  color: #090715;
   font-size: 3.8rem;
   
 }
 
 .input{
-  padding: 12px 20px;
+  padding: 10px 15px;
+  width: 300px;
+  height: px;
   border-radius: 8px;
+  background-color: transparent;
+  color: #090715;
+  font-size: 20px;
+  text-align: left;
+  border-color: black;
+}
+
+input::placeholder {
+  color: #090715;
+}
+input:focus{
+  border-color: #090715;
 }
 
 .btn{
-  padding: 12px 15px;
+  background-color:#a4a7ba;
+  color: black;
+  padding: 15px 15px;
   cursor: pointer;
   border-radius: 8px;
 }
 
+
 .btn:hover{
   color: white;
-  background-color: #282c34;
-  transition: all 0.2s ease-in-out;
+  background-color: #111230;
+  transition: all 0.4s ease-in-out;
 }
 
 .space_input input{
   margin: .5rem;
+}
+
+.imagem{
+  width: 30px;
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.2em;
 }

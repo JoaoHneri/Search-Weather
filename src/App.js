@@ -3,8 +3,10 @@ import { useState } from 'react'
 
 function App() {
   const api = {
-    key: 'insira_sua_chave_aqui'
+    key: '352f771834bf046af590b73d00cc76bc'
   }
+
+  const image = "images/"
 
   const [Search, setSearch] = useState('')
   const [weather, setWeather] = useState({})
@@ -17,28 +19,26 @@ function App() {
       .then(res => res.json())
       .then(result => {
         setWeather(result)
-        
+        console.log(result)
         if(result.cod === '404') {
           alert('Cidade não encontrada');
         } else if(result.cod === '400') {
           alert("Insira uma cidade válida");
         }
-    
-      })
-      
+      })  
   }
 
   return (
     <div className="App">
       <header className="App-header">
         <div className="container">
-          <h1 className='titulo'>Search Wheater</h1>
+          <h1 className='titulo'>SEARCH WEATHER</h1>
           <div className="space_input">
             {
               <input
                 className="input"
                 type="text"
-                placeholder="Escreva a cidade"
+                placeholder="Digite o Local"
                 onChange={e => setSearch(e.target.value)}
               />
             }
@@ -47,14 +47,20 @@ function App() {
             </button>
           </div>
           <div>
+          
             {typeof weather.main !== 'undefined' ? (
               <div>
+                <img crossOrigin='anonymous' src={`${image}${weather.weather[0].main}.png`} alt=""></img>
+                <div className='index'>
+                
                 <p>
-                  {weather.name} - {weather.sys.country}
+                  {weather.name}  <img className='imagem' crossOrigin="anonymous" src={`https://countryflagsapi.com/png/${weather.sys.country}`} alt=""></img>
                 </p>
 
                 <p>{weather.main.temp}°C</p>
-                <p>{weather.weather[0].description}</p>
+
+                <p className='row'>{weather.weather[0].description} <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} width="50px" height="50px" alt="Conditions"></img></p>              
+              </div>
               </div>
             ) : (
               ''
