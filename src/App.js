@@ -6,7 +6,8 @@ function App() {
     key: '352f771834bf046af590b73d00cc76bc'
   }
 
-  const image = "images/"
+  const flags = "https://countryflagsapi.com/png"
+  const descript = "http://openweathermap.org/img/wn"
 
   const [Search, setSearch] = useState('')
   const [weather, setWeather] = useState({})
@@ -50,19 +51,18 @@ function App() {
             </button>
           </div>
           <div>
-          
             {typeof weather.main !== 'undefined' ? (
               <div>
-                <img crossOrigin='anonymous' src={`${image}${weather.weather[0].main}.png`} alt=""></img>
+                <br/>
                 <div className='index'>
                 
                 <p>
-                  {weather.name}  <img className='imagem' crossOrigin="anonymous" src={`https://countryflagsapi.com/png/${weather.sys.country}`} alt=""></img>
+                  {weather.name}  <img className='imagem' crossOrigin="anonymous" src={`${flags}/${weather.sys.country}`} alt=""></img>
                 </p>
 
                 <p>{weather.main.temp}°C</p>
 
-                <p className='row'>{weather.weather[0].description} <img src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} width="50px" height="50px" alt="Conditions"></img></p>              
+                <p className='row'>{weather.weather[0].description} <img src={`${descript}/${weather.weather[0].icon}.png`} width="50px" height="50px" alt="Conditions"></img></p>              
               </div>
               </div>
             ) : (
