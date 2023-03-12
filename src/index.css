@@ -30,10 +30,9 @@ code {
   padding: 1em;
   font-family: 'Tilt Warp', cursive;
 }
-
 .container p {
   font-size: 1.8rem;
-  color: #ca8e7b;
+  color: #ffffff;
 }
 
 .container h1 {
@@ -48,21 +47,21 @@ code {
   height: px;
   border-radius: 8px;
   background-color: transparent;
-  color: #090715;
+  color: white;
   font-size: 20px;
   text-align: left;
   border-color: black;
 }
 
 input::placeholder {
-  color: #090715;
+  color: white;
 }
 input:focus{
   border-color: #090715;
 }
 
 .btn{
-  background-color:#a4a7ba;
+  background-color:#3b5473;
   color: black;
   padding: 15px 15px;
   cursor: pointer;

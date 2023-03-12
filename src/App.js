@@ -25,7 +25,10 @@ function App() {
         } else if(result.cod === '400') {
           alert("Insira uma cidade válida");
         }
-      })  
+        
+      }) 
+      
+       
   }
 
   return (
