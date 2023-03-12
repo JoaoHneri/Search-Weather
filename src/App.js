@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function App() {
   const api = {
-    key: '352f771834bf046af590b73d00cc76bc'
+    key: 'insira_aqui_sua_chave_de_api'
   }
 
   const flags = "https://countryflagsapi.com/png"
